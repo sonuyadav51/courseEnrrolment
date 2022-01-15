@@ -21,28 +21,30 @@
     <link rel="stylesheet" href="scss/style.css" />
   </head>
 
-  <body >
+  <body data-type="bg">
     <!--================ Start Header Menu Area =================-->
-    <header class="header_area">
+    <header class="header_area" data-type="bg">
       <div class="header-top">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-              <a href="tel:+917905292740">
+              <a href="tel:+917905292740" data-type="link">
                 <span class="lnr lnr-phone"></span>
                 <span class="text">
-                  <span class="text">+91 7905 292 740</span>
+                  <span class="text" data-type="text">+91 7905 292 740</span>
                 </span>
               </a>
-              <a href="mailto:sonukyadav2510@gmail.com">
+              <a href="mailto:sonukyadav2510@gmail.com" data-type="link">
                 <span class="lnr lnr-envelope"></span>
                 <span class="text">
-                  <span class="text">sonukyadav2510@gmail.com</span>
+                  <span class="text" data-type="text"
+                    >sonukyadav2510@gmail.com</span
+                  >
                 </span>
               </a>
             </div>
             <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-              <a href="#" class="text-uppercase">Login</a>
+              <a href="#" class="text-uppercase" data-type="link">Login</a>
             </div>
           </div>
         </div>
@@ -68,7 +70,10 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav
+          class="navbar navbar-expand-lg navbar-light"
+          data-type="header-footer"
+        >
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="index.html"
@@ -91,28 +96,41 @@
             <div
               class="collapse navbar-collapse offset"
               id="navbarSupportedContent"
+              data-type="bg"
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="index.html" data-type="link"
+                    >Home</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about-us.html">About</a>
+                  <a class="nav-link" href="about-us.html" data-type="link"
+                    >About</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="online-test.html">Online Test</a>
+                  <a class="nav-link" href="online-test.html" data-type="link"
+                    >Online Test</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="courses.html">Courses</a>
+                  <a class="nav-link" href="courses.html" data-type="link"
+                    >Courses</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Materials</a>
+                  <a class="nav-link" href="#" data-type="link">Materials</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Current Affirs</a>
+                  <a class="nav-link" href="#" data-type="link"
+                    >Current Affirs</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
+                  <a class="nav-link" href="contact.html" data-type="link"
+                    >Contact</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -134,11 +152,11 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="banner_content">
-                <h2>
+                <h2 data-type="heading">
                   We Rank the Best <br />
                   Courses at <span>Prayash</span>
                 </h2>
-                <p>
+                <p data-type="text">
                   In the history of modern astronomy, there is probably no one
                   greater leap forward than the building and launch of the space
                   telescope known as the Hubble.
@@ -156,7 +174,11 @@
                       onfocus="this.placeholder = ''"
                       onblur="this.placeholder = 'Search Courses'"
                     />
-                    <button type="submit" class="btn search_course_btn">
+                    <button
+                      type="submit"
+                      class="btn search_course_btn"
+                      data-type="text"
+                    >
                       Search
                     </button>
                   </form>
@@ -179,8 +201,8 @@
                 <span class="lnr lnr-book"></span>
               </div>
               <div class="desc">
-                <h4>New Classes</h4>
-                <p>
+                <h4 data-type="heading">New Classes</h4>
+                <p data-type="text">
                   In the history of modern astronomy, there is probably no one
                   greater leap forward building and launch.
                 </p>
@@ -191,8 +213,8 @@
                 <span class="fa fa-trophy"></span>
               </div>
               <div class="desc">
-                <h4>Top Courses</h4>
-                <p>
+                <h4 data-type="heading">Top Courses</h4>
+                <p data-type="text">
                   In the history of modern astronomy, there is probably no one
                   greater leap forward building and launch.
                 </p>
@@ -203,8 +225,8 @@
                 <span class="lnr lnr-screen"></span>
               </div>
               <div class="desc">
-                <h4>Study Materials</h4>
-                <p>
+                <h4 data-type="heading">Study Materials</h4>
+                <p data-type="text">
                   In the history of modern astronomy, there is probably no one
                   greater leap forward building and launch.
                 </p>
@@ -227,76 +249,71 @@
                 <div
                   class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mt-100"
                 >
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon1.png" alt="" />
                     </div>
-                    <h4>OTET</h4>
+                    <h4 data-type="heading">OTET</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon2.png" alt="" />
                     </div>
-                    <h4>SS</h4>
+                    <h4 data-type="heading">SS</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div
                   class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mt-100"
                 >
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon3.png" alt="" />
                     </div>
-                    <h4>CT</h4>
+                    <h4 data-type="heading">CT</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon4.png" alt="" />
                     </div>
-                    <h4>OSSTET</h4>
+                    <h4 data-type="heading">OSSTET</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div
                   class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mt--100"
                 >
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon5.png" alt="" />
                     </div>
-                    <h4>M.ED</h4>
+                    <h4 data-type="heading">M.ED</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon6.png" alt="" />
                     </div>
-                    <h4>B.ED</h4>
+                    <h4 data-type="heading">B.ED</h4>
                   </div>
                 </div>
                 <!-- single course -->
                 <div
-                  class="
-                    offset-lg-4
-                    col-lg-4 col-md-4 col-sm-6 col-12
-                    text-center
-                    mt--100
-                  "
+                  class="offset-lg-4 col-lg-4 col-md-4 col-sm-6 col-12 text-center mt--100"
                 >
-                  <div class="single_department">
+                  <div class="single_department" data-type="box">
                     <div class="dpmt_icon">
                       <img src="img/dpmt/icon7.png" alt="" />
                     </div>
-                    <h4>OAVS</h4>
+                    <h4 data-type="heading">OAVS</h4>
                   </div>
                 </div>
               </div>
@@ -305,8 +322,10 @@
 
           <div class="offset-lg-1 col-lg-5">
             <div class="dpmt_right">
-              <h1>Over 10+ Courses With Quality Materials</h1>
-              <p>
+              <h1 data-type="heading">
+                Over 10+ Courses With Quality Materials
+              </h1>
+              <p data-type="text">
                 There is a moment in the life of any aspiring astronomer that it
                 is time to buy that first telescope. It’s exciting to think
                 about setting up your own viewing station. In the life of any
@@ -314,12 +333,14 @@
                 It’s exciting to think about setting up your own viewing
                 station.
               </p>
-              <p>
+              <p data-type="text">
                 It’s exciting to think about setting up your own viewing
                 station. In the life of any aspiring astronomer that it is time
                 to buy that first telescope exciting is time to buy that first.
               </p>
-              <a href="#" class="primary-btn text-uppercase">Explore Courses</a>
+              <a href="#" class="primary-btn text-uppercase" data-type="text"
+                >Explore Courses</a
+              >
             </div>
           </div>
         </div>
@@ -333,8 +354,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="main_title">
-              <h2>Popular Courses</h2>
-              <p>
+              <h2 data-type="heading">Popular Courses</h2>
+              <p data-type="text">
                 There is a moment in the life of any aspiring astronomer that it
                 is time to buy that first telescope. It’s exciting to think
                 about setting up your own viewing station.
@@ -354,28 +375,134 @@
                 />
                 <div class="authr_meta">
                   <img src="img/author1.png" alt="Santosh" />
-                  <span>Santosh Sir</span>
+                  <span data-type="text">Santosh Sir</span>
                 </div>
               </div>
               <div class="course_content">
                 <h4>
-                  <a href="course-details.html">Learn SS beginners</a>
+                  <a href="course-details.html" data-type="text"
+                    >Learn SS beginners</a
+                  >
                 </h4>
-                <p>
+                <p data-type="text">
                   When television was young, there was a huge popular show based
                   on the still popular fictional character of Superman.
                 </p>
                 <div class="course_meta d-flex justify-content-between">
                   <div>
                     <span class="meta_info">
-                      <a href="#"><i class="lnr lnr-user"></i>355</a>
+                      <a href="#"
+                        ><i class="lnr lnr-user" data-type="text"></i>355</a
+                      >
                     </span>
                     <span class="meta_info">
-                      <a href="#"> <i class="lnr lnr-bubble"></i>35 </a>
+                      <a href="#">
+                        <i class="lnr lnr-bubble" data-type="text"></i>35
+                      </a>
                     </span>
                   </div>
                   <div>
-                    <a href="#"><span class="price df_color1">₹2999</span></a>
+                    <a href="#"
+                      ><span class="price df_color1" data-type="text"
+                        >₹2999</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single course -->
+          <div class="col-lg-3 col-md-6">
+            <div class="single_course">
+              <div class="course_head overlay">
+                <img
+                  class="img-fluid w-100"
+                  src="img/courses/trainer1.jpg"
+                  alt=""
+                />
+                <div class="authr_meta">
+                  <img src="img/author1.png" alt="Santosh" />
+                  <span data-type="text">Santosh Sir</span>
+                </div>
+              </div>
+              <div class="course_content">
+                <h4>
+                  <a href="course-details.html" data-type="text"
+                    >Learn OTET beginners</a
+                  >
+                </h4>
+                <p data-type="text">
+                  When television was young, there was a huge popular show based
+                  on the still popular fictional character of Superman.
+                </p>
+                <div class="course_meta d-flex justify-content-between">
+                  <div>
+                    <span class="meta_info">
+                      <a href="#"
+                        ><i class="lnr lnr-user" data-type="text"></i>355</a
+                      >
+                    </span>
+                    <span class="meta_info">
+                      <a href="#">
+                        <i class="lnr lnr-bubble" data-type="text"></i>35
+                      </a>
+                    </span>
+                  </div>
+                  <div>
+                    <a href="#"
+                      ><span class="price df_color1" data-type="text"
+                        >₹2999</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single course -->
+          <div class="col-lg-3 col-md-6">
+            <div class="single_course">
+              <div class="course_head overlay">
+                <img
+                  class="img-fluid w-100"
+                  src="img/courses/trainer1.jpg"
+                  alt=""
+                />
+                <div class="authr_meta">
+                  <img src="img/author1.png" alt="Santosh" />
+                  <span data-type="text">Santosh Sir</span>
+                </div>
+              </div>
+              <div class="course_content">
+                <h4>
+                  <a href="course-details.html" data-type="text"
+                    >Learn M.Ed beginners</a
+                  >
+                </h4>
+                <p data-type="text">
+                  When television was young, there was a huge popular show based
+                  on the still popular fictional character of Superman.
+                </p>
+                <div class="course_meta d-flex justify-content-between">
+                  <div>
+                    <span class="meta_info">
+                      <a href="#"
+                        ><i class="lnr lnr-user" data-type="text"></i>355</a
+                      >
+                    </span>
+                    <span class="meta_info">
+                      <a href="#">
+                        <i class="lnr lnr-bubble" data-type="text"></i>35
+                      </a>
+                    </span>
+                  </div>
+                  <div>
+                    <a href="#"
+                      ><span class="price df_color1" data-type="text"
+                        >₹2999</span
+                      ></a
+                    >
                   </div>
                 </div>
               </div>
@@ -397,99 +524,33 @@
               </div>
               <div class="course_content">
                 <h4>
-                  <a href="course-details.html">Learn OTET beginners</a>
+                  <a href="course-details.html" data-type="text"
+                    >Learn CT beginners</a
+                  >
                 </h4>
-                <p>
+                <p data-type="text">
                   When television was young, there was a huge popular show based
                   on the still popular fictional character of Superman.
                 </p>
                 <div class="course_meta d-flex justify-content-between">
                   <div>
                     <span class="meta_info">
-                      <a href="#"><i class="lnr lnr-user"></i>355</a>
+                      <a href="#"
+                        ><i class="lnr lnr-user" data-type="text"></i>355</a
+                      >
                     </span>
                     <span class="meta_info">
-                      <a href="#"> <i class="lnr lnr-bubble"></i>35 </a>
+                      <a href="#">
+                        <i class="lnr lnr-bubble" data-type="text"></i>35
+                      </a>
                     </span>
                   </div>
                   <div>
-                    <a href="#"><span class="price df_color1">₹2999</span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single course -->
-          <div class="col-lg-3 col-md-6">
-            <div class="single_course">
-              <div class="course_head overlay">
-                <img
-                  class="img-fluid w-100"
-                  src="img/courses/trainer1.jpg"
-                  alt=""
-                />
-                <div class="authr_meta">
-                  <img src="img/author1.png" alt="Santosh" />
-                  <span>Santosh Sir</span>
-                </div>
-              </div>
-              <div class="course_content">
-                <h4>
-                  <a href="course-details.html">Learn M.Ed beginners</a>
-                </h4>
-                <p>
-                  When television was young, there was a huge popular show based
-                  on the still popular fictional character of Superman.
-                </p>
-                <div class="course_meta d-flex justify-content-between">
-                  <div>
-                    <span class="meta_info">
-                      <a href="#"><i class="lnr lnr-user"></i>355</a>
-                    </span>
-                    <span class="meta_info">
-                      <a href="#"> <i class="lnr lnr-bubble"></i>35 </a>
-                    </span>
-                  </div>
-                  <div>
-                    <a href="#"><span class="price df_color1">₹2999</span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single course -->
-          <div class="col-lg-3 col-md-6">
-            <div class="single_course">
-              <div class="course_head overlay">
-                <img
-                  class="img-fluid w-100"
-                  src="img/courses/trainer1.jpg"
-                  alt=""
-                />
-                <div class="authr_meta">
-                  <img src="img/author1.png" alt="Santosh" />
-                  <span>Santosh Sir</span>
-                </div>
-              </div>
-              <div class="course_content">
-                <h4>
-                  <a href="course-details.html">Learn CT beginners</a>
-                </h4>
-                <p>
-                  When television was young, there was a huge popular show based
-                  on the still popular fictional character of Superman.
-                </p>
-                <div class="course_meta d-flex justify-content-between">
-                  <div>
-                    <span class="meta_info">
-                      <a href="#"><i class="lnr lnr-user"></i>355</a>
-                    </span>
-                    <span class="meta_info">
-                      <a href="#"> <i class="lnr lnr-bubble"></i>35 </a>
-                    </span>
-                  </div>
-                  <div>
-                    <a href="#"><span class="price df_color1">₹2999</span></a>
+                    <a href="#"
+                      ><span class="price df_color1" data-type="text"
+                        >₹2999</span
+                      ></a
+                    >
                   </div>
                 </div>
               </div>
@@ -506,8 +567,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="main_title">
-              <h2>Facts that Make us Unique</h2>
-              <p>
+              <h2 data-type="heading">Facts that Make us Unique</h2>
+              <p data-type="text">
                 There is a moment in the life of any aspiring astronomer that it
                 is time to buy that first telescope. It’s exciting to think
                 about setting up your own viewing station.
@@ -522,8 +583,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon1.png" alt="" />
               </div>
-              <h4>Expert Mentor</h4>
-              <p>
+              <h4 data-type="heading">Expert Mentor</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do
                 eiusmod tempor incididunt labore dolor sit amet consec tetur
                 adipisicing elit, sed do eiusmod tempor sed do eiusmod tempor
@@ -538,8 +599,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon2.png" alt="" />
               </div>
-              <h4>10+ Courses</h4>
-              <p>
+              <h4 data-type="heading">10+ Courses</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipis icing elit, sed
                 do eiusmod tempor incididunt labore dolor sit amet consec.
               </p>
@@ -551,8 +612,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon3.png" alt="" />
               </div>
-              <h4>Current Affairs</h4>
-              <p>
+              <h4 data-type="heading">Current Affairs</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do
                 eiusmod tempor incididunt labore dolor sit amet consec tetur
                 adipisicing elit, sed do eiusmod tempor sed do eiusmod tempor
@@ -567,8 +628,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon4.png" alt="" />
               </div>
-              <h4>Live Online Exam</h4>
-              <p>
+              <h4 data-type="heading">Live Online Exam</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do
                 eiusmod tempor incididunt labore dolor sit amet consec tetur
                 adipisicing elit sed do eiusmod.
@@ -581,8 +642,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon5.png" alt="" />
               </div>
-              <h4>Study Materials Included</h4>
-              <p>
+              <h4 data-type="heading">Study Materials Included</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do
                 eiusmod tempor incididunt labore dolor sit amet consec tetur
                 adipisicing elit sed do eiusmod.
@@ -595,8 +656,8 @@
               <div class="f_icon">
                 <img src="img/f-icons/icon6.png" alt="" />
               </div>
-              <h4>Live Support</h4>
-              <p>
+              <h4 data-type="heading">Live Support</h4>
+              <p data-type="text">
                 Lorem ipsum dolor sit amet consec tetur adipis icing elit, sed
                 do eiusmod tempor incididunt labore dolor sit amet consec.
               </p>
@@ -617,7 +678,7 @@
               <div class="single_testimonial">
                 <div class="testimonial_head">
                   <img src="img/quote.png" alt="" />
-                  <h4>Arun Barik</h4>
+                  <h4 data-type="heading">Arun Barik</h4>
                   <div class="review">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -627,7 +688,7 @@
                   </div>
                 </div>
                 <div class="testimonial_content">
-                  <p>
+                  <p data-type="text">
                     As conscious traveling Paup ers we must always be oncerned
                     about our dear Mother Earth. If you think about it, you
                     travel across her faceand She is the host to your journey.
@@ -638,7 +699,7 @@
               <div class="single_testimonial">
                 <div class="testimonial_head">
                   <img src="img/quote.png" alt="" />
-                  <h4>Arun Barik</h4>
+                  <h4 data-type="heading">Arun Barik</h4>
                   <div class="review">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -648,7 +709,7 @@
                   </div>
                 </div>
                 <div class="testimonial_content">
-                  <p>
+                  <p data-type="text">
                     As conscious traveling Paup ers we must always be oncerned
                     about our dear Mother Earth. If you think about it, you
                     travel across her faceand She is the host to your journey.
@@ -659,7 +720,7 @@
               <div class="single_testimonial">
                 <div class="testimonial_head">
                   <img src="img/quote.png" alt="" />
-                  <h4>Arun Barik</h4>
+                  <h4 data-type="heading">Arun Barik</h4>
                   <div class="review">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -669,7 +730,7 @@
                   </div>
                 </div>
                 <div class="testimonial_content">
-                  <p>
+                  <p data-type="text">
                     As conscious traveling Paup ers we must always be oncerned
                     about our dear Mother Earth. If you think about it, you
                     travel across her faceand She is the host to your journey.
@@ -680,7 +741,7 @@
               <div class="single_testimonial">
                 <div class="testimonial_head">
                   <img src="img/quote.png" alt="" />
-                  <h4>Arun Barik</h4>
+                  <h4 data-type="heading">Arun Barik</h4>
                   <div class="review">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -690,7 +751,7 @@
                   </div>
                 </div>
                 <div class="testimonial_content">
-                  <p>
+                  <p data-type="text">
                     As conscious traveling Paup ers we must always be oncerned
                     about our dear Mother Earth. If you think about it, you
                     travel across her faceand She is the host to your journey.
@@ -741,35 +802,35 @@
           <div class="col-lg-7">
             <div class="row clock_sec clockdiv" id="clockdiv">
               <div class="col-lg-12">
-                <h1>Register Now</h1>
-                <p>
+                <h1 data-type="heading">Register Now</h1>
+                <p data-type="text">
                   There is a moment in the life of any aspiring astronomer that
                   it is time to buy that first telescope. It’s exciting to think
                   about setting up your own viewing station.
                 </p>
               </div>
               <div class="col clockinner1 clockinner">
-                <h1 class="days">150</h1>
+                <h1 class="days" data-type="text">150</h1>
                 <span class="smalltext">Days</span>
               </div>
               <div class="col clockinner clockinner1">
-                <h1 class="hours">23</h1>
-                <span class="smalltext">Hours</span>
+                <h1 class="hours" data-type="text">23</h1>
+                <span class="smalltext" data-type="text">Hours</span>
               </div>
               <div class="col clockinner clockinner1">
-                <h1 class="minutes">47</h1>
-                <span class="smalltext">Mins</span>
+                <h1 class="minutes" data-type="text" data-type="text">47</h1>
+                <span class="smalltext" data-type="text">Mins</span>
               </div>
               <div class="col clockinner clockinner1">
-                <h1 class="seconds">59</h1>
-                <span class="smalltext">Secs</span>
+                <h1 class="seconds" data-type="text">59</h1>
+                <span class="smalltext" data-type="text">Secs</span>
               </div>
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1">
             <div class="register_form">
-              <h3>Courses for Free</h3>
-              <p>It is high time for learning</p>
+              <h3 data-type="heading">Courses for Free</h3>
+              <p data-type="text">It is high time for learning</p>
               <form
                 class="form_area"
                 id="myForm"
@@ -816,8 +877,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="main_title">
-              <h2>Upcoming Exams</h2>
-              <p>
+              <h2 data-type="heading">Upcoming Exams</h2>
+              <p data-type="text">
                 There is a moment in the life of any aspiring astronomer that it
                 is time to buy that first telescope. It’s exciting to think
                 about setting up your own viewing station.
@@ -838,12 +899,12 @@
                     </div>
                     <div class="col-lg-6 col-md-7">
                       <div class="event_details">
-                        <p>25th February, 2017</p>
+                        <p data-type="text">25th February, 2017</p>
                         <h4>
-                          <a href="#">OTET TEST 1</a>
+                          <a href="#" data-type="link">OTET TEST 1</a>
                           <span class="badge badge-danger">new</span>
                         </h4>
-                        <p>
+                        <p data-type="text">
                           Lorem ipsum dolor sit amet consec tetur adipisicing
                           elit, sed do eiusmod tempor incididunt labore dolor
                           sit amet consec tetur adipisicing elit sed.
@@ -867,11 +928,11 @@
                     </div>
                     <div class="col-lg-5 col-md-7">
                       <div class="event_details">
-                        <p>25th February, 2017</p>
+                        <p data-type="text">25th February, 2017</p>
                         <h4>
-                          <a href="#">SS TEST 7</a>
+                          <a href="#" data-type="link">SS TEST 7</a>
                         </h4>
-                        <p>
+                        <p data-type="text">
                           Lorem ipsum dolor sit amet consec tetur adipisicing
                           elit, sed do eiusmod tempor incididunt labore dolor
                           sit amet consec tetur adipisicing elit sed.
@@ -889,43 +950,43 @@
     <!--================ End Events Area =================-->
 
     <!--================ Start footer Area  =================-->
-    <footer class="footer-area section_gap">
+    <footer class="footer-area section_gap" data-type="header-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>Top Exams</h4>
+            <h4 data-type="heading">Top Exams</h4>
             <ul>
-              <li><a href="#">Exam 1</a></li>
-              <li><a href="#">Exam 1</a></li>
-              <li><a href="#">Exam 1</a></li>
-              <li><a href="#">Exam 1</a></li>
+              <li><a href="#" data-type="link">Exam 1</a></li>
+              <li><a href="#" data-type="link">Exam 1</a></li>
+              <li><a href="#" data-type="link">Exam 1</a></li>
+              <li><a href="#" data-type="link">Exam 1</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>Quick Links</h4>
+            <h4 data-type="heading">Quick Links</h4>
             <ul>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Current Affairs</a></li>
-              <li><a href="#">New Announcement</a></li>
-              <li><a href="#">Promo Offers</a></li>
+              <li><a href="#" data-type="link">Courses</a></li>
+              <li><a href="#" data-type="link">Current Affairs</a></li>
+              <li><a href="#" data-type="link">New Announcement</a></li>
+              <li><a href="#" data-type="link">Promo Offers</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>New Materials</h4>
+            <h4 data-type="heading">New Materials</h4>
             <ul>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>Resources</h4>
+            <h4 data-type="heading">Resources</h4>
             <ul>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
-              <li><a href="#">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
+              <li><a href="#" data-type="link">Material 1</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 single-footer-widget">
@@ -933,15 +994,20 @@
           </div>
         </div>
         <div class="row footer-bottom d-flex justify-content-between">
-          <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+          <p
+            class="col-lg-8 col-sm-12 footer-text m-0 text-white"
+            data-type="text"
+          >
             Copyright © 2019 All rights reserved | This Website is made with
-            <i class="fa fa-heart-o" aria-hidden="true"></i> by
-            <a href="https://sonuyadav.in/" target="_blank">Sonu Yadav</a>
+            <i class="fa fa-heart-o" aria-hidden="true" data-type="text"></i> by
+            <a href="https://sonuyadav.in/" target="_blank" data-type="link"
+              >Sonu Yadav</a
+            >
           </p>
           <div class="col-lg-4 col-sm-12 footer-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#" data-type="link"><i class="fa fa-facebook"></i></a>
+            <a href="#" data-type="link"><i class="fa fa-twitter"></i></a>
+            <a href="#" data-type="link"><i class="fa fa-youtube"></i></a>
           </div>
         </div>
       </div>
@@ -965,5 +1031,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/theme.js"></script>
+    <script type="module">
+      import theme from "./node_modules//@sonuyadav51//theme-js//lib/theme.js";
+
+      theme();
+    </script>
   </body>
 </html>
