@@ -1,4 +1,3 @@
-
 class Cookie {
   set(name, value, daysToLive) {
     let cookie = name + "=" + encodeURIComponent(value);
@@ -42,7 +41,7 @@ class Theme extends Cookie {
     setTimeout(function () {
       btn.classList.remove("theme-toggle-btn-animate");
       theme.set("animate", "1", 30);
-    }, 5000);
+    }, 30000);
   }
   addDarkClasses(allLightTheme, lightTheme) {
     let style = document.createElement("style");
@@ -56,27 +55,32 @@ class Theme extends Cookie {
       --colors-beta: #9f7aea;
       }
     .dark-bg {
-      background: var(--dark-body-background); 
+      background: var(--dark-body-background) !important; 
       transition:all 500ms ease-in-out; 
+      color: var(--colors-mute) !important;
     }
     .dark-box {
       box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
       border-radius: 10px;
-      padding: 10px;
-      background: var(--colors-omegaDarker);
-      transition:all 500ms ease-in-out;
-    }
-    .dark-header-footer {
       background: var(--colors-omegaDarker) !important;
+      color: var(--colors-mute) !important;
+      
+    }
+    .dark-header, .dark-footer {
+      background: var(--colors-omegaDarker) !important;
+      color: var(--colors-mute) !important;
     }
     .dark-heading {
-      color: var(--colors-omegaLighter);
+      color: var(--colors-omegaLighter) !important;
     }
     .dark-text,.dark-link {
       color: var(--colors-mute) !important;
     }
     .dark-link:hover{
        color:var(--colors-beta) !important;
+    }
+    .dark-link.active{
+      color:var(--colors-beta) !important;
     }
     `;
       allLightTheme.forEach(function (one) {
@@ -98,26 +102,31 @@ class Theme extends Cookie {
       }
       .bg{
         background: var(--colors-background);
-        transition:all 500ms ease-in-out;
+        transition:all 500ms ease-in-out !important;
+        color: var(--colors-text) !important;
       }
       .box {
         box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
         border-radius: 10px;
-        padding: 10px;
-        background: var(--colors-white);
-        transition:all 500ms ease-in-out;
+        background: var(--colors-white) !important;
+        color: var(--colors-text) !important;
+        
       }
-      .header-footer {
-        background: var(--colors-white);
+      .header,.footer {
+        background: var(--colors-white) !important;
+        color: var(--colors-text) !important;
       }
       .heading {
-        color: var(--colors-heading);
+        color: var(--colors-heading) !important;
       }
       .text,.link {
-        color: var(--colors-text);
+        color: var(--colors-text) !important;
       }
       .link:hover{
-        color:var(--colors-betaDark);
+        color:var(--colors-betaDark) !important;
+      }
+      .link.active{
+        color:var(--colors-betaDark) !important;
       }
       `;
       if (lightTheme == true) {
@@ -135,7 +144,7 @@ class Theme extends Cookie {
       height: 20px;
       border-radius: 38px;
       position: fixed;
-      z-index: 99999;
+      z-index: 999999999;
       background: linear-gradient(45deg, #fff, #ff9933);
     }  
     .theme-toggle-btn::before {
@@ -147,7 +156,7 @@ class Theme extends Cookie {
       background: #fff;
       top: -9%;
       left: -1%;
-      z-index: 999999;
+      z-index: 9999999999;
       transition: 0.5s;
       box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.07);
     }
@@ -302,4 +311,3 @@ class Theme extends Cookie {
 let theme = new Theme();
 let start = theme.start;
 export { start as default };
-
