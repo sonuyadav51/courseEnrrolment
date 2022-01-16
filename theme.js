@@ -144,7 +144,7 @@ class Theme extends Cookie {
       outline: 0;
       cursor: pointer;
       width: 48px;
-      height: 20px;
+      height: 23px;
       border-radius: 38px;
       position: fixed;
       z-index: 999999999;
@@ -152,6 +152,7 @@ class Theme extends Cookie {
       padding-bottom:3px;
       display:flex;
       justify-content:flex-end;
+      box-sizing:border-box;
     }  
     .theme-toggle-btn::before {
       content: "";
