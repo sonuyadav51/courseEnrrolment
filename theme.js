@@ -32,7 +32,10 @@ class Theme extends Cookie {
   createDefaultToggleBtn(top, left) {
     let btn = document.createElement("span");
     btn.classList.add("theme-toggle-btn");
+    btn.textContent = "🌜";
     btn.setAttribute("data-themechoice", "dark");
+    btn.setAttribute("data-darktitle", "🌞");
+    btn.setAttribute("data-title", "🌜");
     btn.setAttribute("style", `top:${top};left:${left};`);
     document.body.appendChild(btn);
     if (!theme.check("animate")) {
@@ -145,17 +148,20 @@ class Theme extends Cookie {
       border-radius: 38px;
       position: fixed;
       z-index: 999999999;
-      background: linear-gradient(45deg, #fff, #ff9933);
+      background: rgba(0,0,0,0.7);
+      padding-bottom:3px;
+      display:flex;
+      justify-content:flex-end;
     }  
     .theme-toggle-btn::before {
       content: "";
       position: absolute;
-      width: 23px;
-      height: 23px;
+      width:20px;
+      height: 20px;
       border-radius: 50%;
       background: #fff;
-      top: -9%;
-      left: -1%;
+      top: 1%;
+      left: 1%;
       z-index: 9999999999;
       transition: 0.5s;
       box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.07);
@@ -164,11 +170,13 @@ class Theme extends Cookie {
       left: 57%;
       transition: 0.5s;
       background:#fff;
-      top: -8%;
+      top: 1%;
       box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .theme-toggle-btn.active{
-      background:linear-gradient(45deg,#ff9933, #fff);
+      background:rgba(0,0,0,0.4);
+      justify-content:flex-start;
+      align-items:center;
     }
     .theme-toggle-btn-animate {
       animation: animate 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
