@@ -138,7 +138,8 @@ class Theme extends Cookie {
         });
       }
     }
-    style.textContent += `     
+    style.textContent += `  
+
      .theme-toggle-btn {
       border: 0;
       outline: 0;
@@ -149,7 +150,6 @@ class Theme extends Cookie {
       position: fixed;
       z-index: 999999999;
       background: rgba(0,0,0,0.7);
-      padding-bottom:3px;
       display:flex;
       justify-content:flex-end;
       box-sizing:border-box;
@@ -175,7 +175,7 @@ class Theme extends Cookie {
       box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .theme-toggle-btn.active{
-      background:rgba(0,0,0,0.4);
+      background:#ccc;
       justify-content:flex-start;
       align-items:center;
     }
