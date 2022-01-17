@@ -33,22 +33,25 @@ class Theme extends Cookie {
     let btn = document.createElement("span");
     btn.classList.add("theme-toggle-btn");
     btn.textContent = "🌜";
-    btn.setAttribute("data-themechoice", "dark");
-    btn.setAttribute("data-darktitle", "🌞");
-    btn.setAttribute("data-title", "🌜");
+    btn.setAttribute("data-newtheme", "dark");
+    btn.setAttribute("data-aftertitle", "🌞");
+    btn.setAttribute("data-beforetitle", "🌜");
     btn.setAttribute("style", `top:${top};left:${left};`);
     document.body.appendChild(btn);
-    if (!theme.check("animate")) {
+    if (!defaultObj.check("animate")) {
       btn.classList.add("theme-toggle-btn-animate");
     }
     setTimeout(function () {
       btn.classList.remove("theme-toggle-btn-animate");
-      theme.set("animate", "1", 30);
-    }, 30000);
+      defaultObj.set("animate", "1", 30);
+    }, 11000);
   }
   addDarkClasses(allLightTheme, lightTheme) {
     let style = document.createElement("style");
-    if (this.check("theme") && this.get("theme") == "dark") {
+    if (
+      defaultObj.check("cur_sel_theme") &&
+      defaultObj.get("cur_sel_theme") == "dark"
+    ) {
       style.textContent = `
       :root {
       --dark-body-background: #1a202c;
@@ -63,6 +66,11 @@ class Theme extends Cookie {
       color: var(--colors-mute) !important;
     }
     .dark-box {
+      background: var(--colors-omegaDarker) !important;
+      color: var(--colors-mute) !important;
+      
+    }
+    .dark-box-shadow {
       box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
       border-radius: 10px;
       background: var(--colors-omegaDarker) !important;
@@ -85,11 +93,17 @@ class Theme extends Cookie {
     .dark-link.active{
       color:var(--colors-beta) !important;
     }
+    .dark-list{
+      color: var(--colors-mute) !important;
+    }
     `;
       allLightTheme.forEach(function (one) {
         one.classList.remove(one.dataset.type);
       });
-    } else if (this.check("theme") && this.get("theme") != "dark") {
+    } else if (
+      defaultObj.check("cur_sel_theme") &&
+      defaultObj.get("cur_sel_theme") != "dark"
+    ) {
       document.head.lastChild.textContent = "";
       allLightTheme.forEach(function (one) {
         one.classList.remove(one.dataset.type);
@@ -109,6 +123,10 @@ class Theme extends Cookie {
         color: var(--colors-text) !important;
       }
       .box {
+        background: var(--colors-white) !important;
+        color: var(--colors-text) !important;   
+      }
+      .box-shadow {
         box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
         border-radius: 10px;
         background: var(--colors-white) !important;
@@ -130,6 +148,9 @@ class Theme extends Cookie {
       }
       .link.active{
         color:var(--colors-betaDark) !important;
+      }
+      .list{
+        color: var(--colors-text) !important;
       }
       `;
       if (lightTheme == true) {
@@ -161,7 +182,7 @@ class Theme extends Cookie {
       height: 20px;
       border-radius: 50%;
       background: #fff;
-      top: 1%;
+      top: 5%;
       left: 1%;
       z-index: 9999999999;
       transition: 0.5s;
@@ -171,7 +192,7 @@ class Theme extends Cookie {
       left: 57%;
       transition: 0.5s;
       background:#fff;
-      top: 1%;
+      top: 5%;
       box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .theme-toggle-btn.active{
@@ -207,7 +228,7 @@ class Theme extends Cookie {
     document.head.appendChild(style);
   }
   toDark(allLightTheme) {
-    let themeChoice = this.get("theme");
+    let themeChoice = defaultObj.get("cur_sel_theme");
     allLightTheme.forEach((l) => {
       let theme = l.dataset.type;
       theme = `dark-${theme}`;
@@ -219,43 +240,51 @@ class Theme extends Cookie {
     allLightTheme.forEach((l) => {
       let theme = l.dataset.type;
       theme = `dark-${theme}`;
-      let selectedtheme = this.get("theme");
+      let selectedtheme = defaultObj.get("cur_sel_theme");
       if (selectedtheme == null) {
         l.classList.remove(theme);
       }
     });
   }
   handleMultipleTheme(btn, allLightTheme = null, lightTheme) {
-    const themeChoice = btn.dataset.themechoice;
+    const themeChoice = btn.dataset.newtheme;
     allLightTheme.forEach((one) => {
       one.classList.remove(`dark-${one.dataset.type}`);
-      if (this.check("theme")) {
-        one.classList.remove(`${this.get("theme")}-${one.dataset.type}`);
+      if (defaultObj.check("cur_sel_theme")) {
+        one.classList.remove(
+          `${defaultObj.get("cur_sel_theme")}-${one.dataset.type}`,
+        );
       }
     });
-    if (this.check("theme") && this.get("theme") == themeChoice) {
-      this.delete("theme");
-      this.toLight(allLightTheme);
-      this.addDarkClasses(allLightTheme, lightTheme);
+    if (
+      defaultObj.check("cur_sel_theme") &&
+      defaultObj.get("cur_sel_theme") == themeChoice
+    ) {
+      defaultObj.delete("cur_sel_theme");
+      defaultObj.toLight(allLightTheme);
+      defaultObj.addDarkClasses(allLightTheme, lightTheme);
     } else {
-      this.set("theme", themeChoice, 30);
-      this.addDarkClasses(allLightTheme, lightTheme);
-      this.toDark(allLightTheme);
+      defaultObj.set("cur_sel_theme", themeChoice, 30);
+      defaultObj.addDarkClasses(allLightTheme, lightTheme);
+      defaultObj.toDark(allLightTheme);
     }
   }
   handleMultipleBtn(btns) {
     btns.forEach(function (btn) {
-      const themeChoice = btn.dataset.themechoice;
-      let darktitle = "";
-      if (btn.dataset.darktitle) {
-        darktitle = btn.dataset.darktitle;
+      const themeChoice = btn.dataset.newtheme;
+      let updatetitle = "";
+      if (btn.dataset.aftertitle) {
+        updatetitle = btn.dataset.aftertitle;
       } else {
-        darktitle = "";
+        updatetitle = "";
       }
-      if (theme.check("theme") && theme.get("theme") == themeChoice) {
+      if (
+        defaultObj.check("cur_sel_theme") &&
+        defaultObj.get("cur_sel_theme") == themeChoice
+      ) {
         btn.classList.add("active");
-        if (darktitle !== "") {
-          btn.textContent = darktitle;
+        if (updatetitle !== "") {
+          btn.textContent = updatetitle;
         }
       } else {
         btn.classList.remove("active");
@@ -263,14 +292,17 @@ class Theme extends Cookie {
       btn.addEventListener("click", function () {
         btns.forEach(function (btn) {
           btn.classList.remove("active");
-          if (btn.dataset.title && btn.dataset.title !== "") {
-            btn.textContent = btn.dataset.title;
+          if (btn.dataset.beforetitle && btn.dataset.beforetitle !== "") {
+            btn.textContent = btn.dataset.beforetitle;
           }
         });
-        if (theme.check("theme") && theme.get("theme") == themeChoice) {
+        if (
+          defaultObj.check("cur_sel_theme") &&
+          defaultObj.get("cur_sel_theme") == themeChoice
+        ) {
           btn.classList.add("active");
-          if (darktitle !== "") {
-            btn.textContent = darktitle;
+          if (updatetitle !== "") {
+            btn.textContent = updatetitle;
           }
         } else {
           btn.classList.remove("active");
@@ -278,45 +310,82 @@ class Theme extends Cookie {
       });
     });
   }
-  init(btns = null, allLightTheme = null, lightTheme) {
-    this.addDarkClasses(allLightTheme, lightTheme);
-    this.handleMultipleBtn(btns);
-    if (allLightTheme != null) {
-      if (this.check("theme")) {
-        this.toDark(allLightTheme);
-      } else {
-        this.toLight(allLightTheme);
-      }
-    }
-  }
   manageOptions(options) {
     options = {
-      btnHide: options.btnHide || false,
+      hideButton: options.hideButton || false,
       lightTheme: options.lightTheme || false,
+      removeAutoDark: options.removeAutoDark || false,
       top: options.top || "5%",
       left: options.left || "83%",
     };
 
     return options;
   }
-  start(options = {}) {
-    let { btnHide, left, top, lightTheme } = theme.manageOptions(options);
-    if (btnHide == false) {
-      theme.createDefaultToggleBtn(top, left);
+  autoAddType(selector, value) {
+    let allElement = document.querySelectorAll(`${selector}`);
+    allElement.forEach(function (el) {
+      if (!el.dataset.type) {
+        el.setAttribute("data-type", `${value}`);
+      }
+    });
+  }
+  manageAutoAddType() {
+    let allProp = {
+      body: "bg",
+      header: "header",
+      footer: "footer",
+      nav: "header",
+      main: "box",
+      p: "text",
+      span: "text",
+      li: "list",
+      ul: "list",
+      a: "link",
+      h1: "heading",
+      h2: "heading",
+      h3: "heading",
+      h4: "heading",
+      h5: "heading",
+      h6: "heading",
+    };
+    for (let key in allProp) {
+      defaultObj.autoAddType(`${key}`, `${allProp[key]}`);
     }
-    let btns = document.querySelectorAll("[data-themechoice]");
+  }
+  init(btns = null, allLightTheme = null, lightTheme) {
+    defaultObj.addDarkClasses(allLightTheme, lightTheme);
+    defaultObj.handleMultipleBtn(btns);
+    if (allLightTheme != null) {
+      if (defaultObj.check("cur_sel_theme")) {
+        defaultObj.toDark(allLightTheme);
+      } else {
+        defaultObj.toLight(allLightTheme);
+      }
+    }
+  }
+  start(options = {}) {
+    let { hideButton, left, top, lightTheme, removeAutoDark } =
+      defaultObj.manageOptions(options);
+    if (hideButton == false) {
+      defaultObj.createDefaultToggleBtn(top, left);
+    }
+    if (removeAutoDark == false) {
+      defaultObj.manageAutoAddType();
+    }
+
+    let btns = document.querySelectorAll("[data-newtheme]");
     let allLightTheme = document.querySelectorAll("[data-type]");
     addEventListener("load", function () {
-      theme.init(btns, allLightTheme, lightTheme);
+      defaultObj.init(btns, allLightTheme, lightTheme);
     });
     btns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        theme.handleMultipleTheme(this, allLightTheme, lightTheme);
+        defaultObj.handleMultipleTheme(this, allLightTheme, lightTheme);
       });
     });
   }
 }
 // exporting object of Theme class
-let theme = new Theme();
-let start = theme.start;
+const defaultObj = new Theme();
+let start = defaultObj.start;
 export { start as default };
