@@ -65,7 +65,11 @@ class Theme extends Cookie {
       transition:all 500ms ease-in-out; 
       color: var(--colors-mute) !important;
     }
-   
+    .dark-bg > div {
+      background: var(--dark-body-background) !important; 
+      transition:all 500ms ease-in-out; 
+      color: var(--colors-mute) !important;
+    }
     .dark-box {
       background: var(--colors-omegaDarker) !important;
       color: var(--colors-mute) !important;
@@ -344,15 +348,13 @@ class Theme extends Cookie {
   manageAutoAddType() {
     let allProp = {
       body: "bg",
-      section: "box",
-      main: "bg",
-      tr: "bg",
-      table: "bg",
-      tbody: "bg",
-      input: "bg",
-      textarea: "bg",
+      main: "box",
+      tr: "box",
+      table: "box",
+      tbody: "box",
+      input: "box",
+      textarea: "box",
       thead: "box",
-      form: "box-shadow",
       header: "header",
       nav: "header",
       footer: "footer",
