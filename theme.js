@@ -65,21 +65,13 @@ class Theme extends Cookie {
       transition:all 500ms ease-in-out; 
       color: var(--colors-mute) !important;
     }
-    .dark-bg * {
-      background: var(--dark-body-background) !important; 
-      transition:all 500ms ease-in-out; 
-      color: var(--colors-mute) !important;
-    }
+   
     .dark-box {
       background: var(--colors-omegaDarker) !important;
       color: var(--colors-mute) !important;
       
     }
-    .dark-box * {
-      background: var(--colors-omegaDarker) !important;
-      color: var(--colors-mute) !important;
-      
-    }
+    
     .dark-box-shadow {
       box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
       border-radius: 10px;
@@ -136,19 +128,12 @@ class Theme extends Cookie {
         transition:all 500ms ease-in-out !important;
         color: var(--colors-text) !important;
       }
-      .bg *{
-        background: var(--colors-background);
-        transition:all 500ms ease-in-out !important;
-        color: var(--colors-text) !important;
-      }
+      
       .box {
         background: var(--colors-white) !important;
         color: var(--colors-text) !important;   
       }
-      .box * {
-        background: var(--colors-white) !important;
-        color: var(--colors-text) !important;   
-      }
+      
       .box-shadow {
         box-shadow: rgba(1, 1, 1, 0.1) 1px 1px 5px 0px;
         border-radius: 10px;
