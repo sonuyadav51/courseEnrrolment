@@ -65,7 +65,17 @@ class Theme extends Cookie {
       transition:all 500ms ease-in-out; 
       color: var(--colors-mute) !important;
     }
+    .dark-bg * {
+      background: var(--dark-body-background) !important; 
+      transition:all 500ms ease-in-out; 
+      color: var(--colors-mute) !important;
+    }
     .dark-box {
+      background: var(--colors-omegaDarker) !important;
+      color: var(--colors-mute) !important;
+      
+    }
+    .dark-box * {
       background: var(--colors-omegaDarker) !important;
       color: var(--colors-mute) !important;
       
@@ -78,6 +88,10 @@ class Theme extends Cookie {
       
     }
     .dark-header, .dark-footer {
+      background: var(--colors-omegaDarker) !important;
+      color: var(--colors-mute) !important;
+    }
+    .dark-header *, .dark-footer * {
       background: var(--colors-omegaDarker) !important;
       color: var(--colors-mute) !important;
     }
@@ -122,7 +136,16 @@ class Theme extends Cookie {
         transition:all 500ms ease-in-out !important;
         color: var(--colors-text) !important;
       }
+      .bg *{
+        background: var(--colors-background);
+        transition:all 500ms ease-in-out !important;
+        color: var(--colors-text) !important;
+      }
       .box {
+        background: var(--colors-white) !important;
+        color: var(--colors-text) !important;   
+      }
+      .box * {
         background: var(--colors-white) !important;
         color: var(--colors-text) !important;   
       }
@@ -134,6 +157,10 @@ class Theme extends Cookie {
         
       }
       .header,.footer {
+        background: var(--colors-white) !important;
+        color: var(--colors-text) !important;
+      }
+      .header *,.footer * {
         background: var(--colors-white) !important;
         color: var(--colors-text) !important;
       }
@@ -332,15 +359,26 @@ class Theme extends Cookie {
   manageAutoAddType() {
     let allProp = {
       body: "bg",
+      section: "bg",
+      main: "bg",
+      tr: "bg",
+      table: "bg",
+      tbody: "bg",
+      input: "bg",
+      textarea: "bg",
+      thead: "box",
+      form: "box-shadow",
       header: "header",
-      footer: "footer",
       nav: "header",
-      main: "box",
+      footer: "footer",
+      td: "text",
       p: "text",
       span: "text",
       li: "list",
       ul: "list",
       a: "link",
+      th: "heading",
+      label: "heading",
       h1: "heading",
       h2: "heading",
       h3: "heading",
