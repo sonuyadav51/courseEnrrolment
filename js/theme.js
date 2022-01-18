@@ -3,7 +3,7 @@ addElement(".single_department", "box");
 addElement(".popular_courses", "box");
 addElement(".instructors_area", "bg");
 addElement(".author_decs", "box");
-addElement(".register_form", "bg");
+addElement(".register_form", "box");
 addElement(".search_course_wrap input", "no");
 theme({ left: "94%", top: "8%" });
 (function ($) {
