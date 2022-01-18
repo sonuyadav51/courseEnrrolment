@@ -344,7 +344,7 @@ class Theme extends Cookie {
   manageAutoAddType() {
     let allProp = {
       body: "bg",
-      section: "bg",
+      section: "box",
       main: "bg",
       tr: "bg",
       table: "bg",
