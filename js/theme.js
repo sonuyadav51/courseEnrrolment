@@ -5,7 +5,7 @@ addElement(".instructors_area", "bg");
 addElement(".author_decs", "box");
 addElement(".register_form", "box");
 addElement(".search_course_wrap input", "no");
-theme({ left: "94%", top: "8%" });
+theme({ left: "84%", top: "8%" });
 (function ($) {
   "use strict";
 
