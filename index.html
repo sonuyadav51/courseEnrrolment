@@ -1012,8 +1012,10 @@
     <script src="js/gmaps.min.js"></script>
     <script src="js/theme.js"></script>
     <script type="module">
-      import theme from "./theme.js";
-
+      import theme, { addElement } from "./theme.js";
+      addElement(".single_department", "box");
+      addElement(".popular_courses", "box");
+      addElement(".register_form", "bg");
       theme({ left: "94%", top: "8%" });
     </script>
   </body>

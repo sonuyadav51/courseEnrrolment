@@ -401,4 +401,5 @@ class Theme extends Cookie {
 // exporting object of Theme class
 const defaultObj = new Theme();
 let start = defaultObj.start;
-export { start as default };
+let addElement = defaultObj.autoAddType;
+export { start as default, addElement };
